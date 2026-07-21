@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 type ContainerWidth = "content" | "reading";
 
 interface ContainerProps {
-  children: ReactNode;
+  children?: ReactNode;
   width?: ContainerWidth;
   className?: string;
 }

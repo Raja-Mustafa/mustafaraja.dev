@@ -21,7 +21,7 @@
   --token-color-info: #89b4fa;
 
   /* Typography */
-  --token-text-display: clamp(2.5rem, 5vw, 4.5rem);
+  --token-text-display: clamp(2.5rem, 4.65vw, 4.2rem);
   --token-text-headline: clamp(2rem, 3.5vw, 3rem);
   --token-text-title: clamp(1.5rem, 2vw, 2rem);
   --token-text-body: 1rem;
