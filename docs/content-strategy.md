@@ -166,6 +166,7 @@ The following can strengthen credibility when authentic, relevant, and contextua
 - Leadership roles supported by concrete actions and results.
 - Awards, recognitions, publications, and affiliations with enough context to understand their significance.
 - Testimonials or references only when specific, attributable, and materially useful.
+-Failure, iteration, and engineering tradeoffs when they improve understanding.
 
 Credibility signals are supporting evidence, not decorative badges. Each should answer a visitor's likely question about capability, contribution, rigor, or impact.
 

@@ -1,26 +1,155 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Color */
+  --token-color-canvas: #17181c;
+  --token-color-surface: #1d1f24;
+  --token-color-surface-muted: #1a1c21;
+  --token-color-surface-elevated: #252830;
+  --token-color-text-primary: #f3f4f6;
+  --token-color-text-secondary: #c4c8d0;
+  --token-color-text-muted: #9298a6;
+  --token-color-border: #333844;
+  --token-color-border-strong: #586174;
+  --token-color-accent: #79aefb;
+  --token-color-accent-strong: #a4c7ff;
+  --token-color-accent-soft: #1e3658;
+  --token-color-accent-foreground: #101822;
+  --token-color-success: #65c598;
+  --token-color-warning: #e0b66b;
+  --token-color-error: #e87979;
+  --token-color-info: #89b4fa;
+
+  /* Typography */
+  --token-text-display: clamp(2.5rem, 5vw, 4.5rem);
+  --token-text-headline: clamp(2rem, 3.5vw, 3rem);
+  --token-text-title: clamp(1.5rem, 2vw, 2rem);
+  --token-text-body: 1rem;
+  --token-text-caption: 0.875rem;
+  --token-text-label: 0.75rem;
+  --token-leading-display: 1.05;
+  --token-leading-headline: 1.15;
+  --token-leading-title: 1.2;
+  --token-leading-body: 1.6;
+  --token-leading-caption: 1.45;
+  --token-leading-label: 1.3;
+  --token-tracking-display: -0.035em;
+  --token-tracking-headline: -0.025em;
+  --token-tracking-label: 0.08em;
+
+  /* Spacing */
+  --token-space-micro: 0.25rem;
+  --token-space-xs: 0.5rem;
+  --token-space-sm: 0.75rem;
+  --token-space-md: 1rem;
+  --token-space-lg: 1.5rem;
+  --token-space-xl: 2rem;
+  --token-space-2xl: 3rem;
+  --token-space-3xl: 4.5rem;
+  --token-space-section: clamp(4rem, 8vw, 7rem);
+  --token-space-page: clamp(1.5rem, 5vw, 4rem);
+
+  /* Radius */
+  --token-radius-sm: 0.375rem;
+  --token-radius-md: 0.625rem;
+  --token-radius-lg: 0.875rem;
+  --token-radius-xl: 1.25rem;
+
+  /* Elevation */
+  --token-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.18);
+  --token-shadow-md: 0 8px 24px rgb(0 0 0 / 0.2);
+  --token-shadow-lg: 0 16px 40px rgb(0 0 0 / 0.24);
+
+  /* Layout */
+  --token-layout-content-width: 72rem;
+  --token-layout-reading-width: 42rem;
+  --token-layout-container-padding: var(--token-space-page);
+  --token-layout-section-spacing: var(--token-space-section);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-canvas: var(--token-color-canvas);
+  --color-surface: var(--token-color-surface);
+  --color-surface-muted: var(--token-color-surface-muted);
+  --color-surface-elevated: var(--token-color-surface-elevated);
+  --color-text-primary: var(--token-color-text-primary);
+  --color-text-secondary: var(--token-color-text-secondary);
+  --color-text-muted: var(--token-color-text-muted);
+  --color-border: var(--token-color-border);
+  --color-border-strong: var(--token-color-border-strong);
+  --color-accent: var(--token-color-accent);
+  --color-accent-strong: var(--token-color-accent-strong);
+  --color-accent-soft: var(--token-color-accent-soft);
+  --color-accent-foreground: var(--token-color-accent-foreground);
+  --color-success: var(--token-color-success);
+  --color-warning: var(--token-color-warning);
+  --color-error: var(--token-color-error);
+  --color-info: var(--token-color-info);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --text-display: var(--token-text-display);
+  --text-display--line-height: var(--token-leading-display);
+  --text-headline: var(--token-text-headline);
+  --text-headline--line-height: var(--token-leading-headline);
+  --text-title: var(--token-text-title);
+  --text-title--line-height: var(--token-leading-title);
+  --text-body: var(--token-text-body);
+  --text-body--line-height: var(--token-leading-body);
+  --text-caption: var(--token-text-caption);
+  --text-caption--line-height: var(--token-leading-caption);
+  --text-label: var(--token-text-label);
+  --text-label--line-height: var(--token-leading-label);
+
+  --tracking-display: var(--token-tracking-display);
+  --tracking-headline: var(--token-tracking-headline);
+  --tracking-label: var(--token-tracking-label);
+
+  --spacing-space-micro: var(--token-space-micro);
+  --spacing-space-xs: var(--token-space-xs);
+  --spacing-space-sm: var(--token-space-sm);
+  --spacing-space-md: var(--token-space-md);
+  --spacing-space-lg: var(--token-space-lg);
+  --spacing-space-xl: var(--token-space-xl);
+  --spacing-space-2xl: var(--token-space-2xl);
+  --spacing-space-3xl: var(--token-space-3xl);
+  --spacing-space-section: var(--token-space-section);
+  --spacing-space-page: var(--token-space-page);
+
+  --radius-sm: var(--token-radius-sm);
+  --radius-md: var(--token-radius-md);
+  --radius-lg: var(--token-radius-lg);
+  --radius-xl: var(--token-radius-xl);
+
+  --shadow-sm: var(--token-shadow-sm);
+  --shadow-md: var(--token-shadow-md);
+  --shadow-lg: var(--token-shadow-lg);
+
+  --container-content: var(--token-layout-content-width);
+  --container-reading: var(--token-layout-reading-width);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  color-scheme: dark;
+  background: var(--token-color-canvas);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  background: var(--token-color-canvas);
+  color: var(--token-color-text-primary);
+  font-family: var(--font-geist-sans), sans-serif;
+  font-size: var(--token-text-body);
+  line-height: var(--token-leading-body);
+}
+
+::selection {
+  background: var(--token-color-accent-soft);
+  color: var(--token-color-text-primary);
+}
+
+:focus-visible {
+  outline: 2px solid var(--token-color-accent-strong);
+  outline-offset: 3px;
 }

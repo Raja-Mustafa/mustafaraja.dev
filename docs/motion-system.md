@@ -27,6 +27,13 @@ Motion should be felt more than noticed. When it is working well, it makes the i
 5. **Motion follows ownership.** An element should move in a way that makes its relationship to its trigger or container clear.
 6. **Motion preserves focus.** It should support orientation and never pull attention away from the task at hand.
 7. **Stillness is the default.** If movement does not improve understanding or response, do not add it.
+8. Motion is earned.
+
+Interfaces should begin from stillness.
+
+Movement is introduced only when it improves understanding, confirms interaction, or preserves continuity.
+
+If removing an animation improves the experience, remove it.
 
 ## Motion Hierarchy
 
@@ -183,6 +190,6 @@ Also avoid animated gradients, decorative particle systems, scroll-jacking, arti
 
 ## Closing Principle
 
-"Motion should be felt before it is seen."
+"Nothing moves without purpose."
 
 — Midnight Precision

@@ -224,3 +224,11 @@ An element belongs in the portfolio when it feels inevitable: useful, legible, a
 
 Consistency is not repetition.
 It is recognition.
+
+---
+
+## Closing Principle
+
+"Nothing is accidental."
+
+— Midnight Precision
