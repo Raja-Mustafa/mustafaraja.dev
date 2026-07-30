@@ -6,6 +6,10 @@ import {
   FeaturedProject,
   type FeaturedProjectProps,
 } from "@/components/sections/featured-project";
+import {
+  ResearchItem,
+  type ResearchItemProps,
+} from "@/components/sections/research-item";
 
 const featuredProjects = [
   {
@@ -41,6 +45,41 @@ const featuredProjects = [
     visualPosition: "start",
   },
 ] as const satisfies readonly FeaturedProjectProps[];
+
+const researchItems = [
+  {
+    index: "01",
+    category: "SEMICONDUCTOR DEVICES",
+    title: "Device Fabrication & Process Engineering",
+    description:
+      "Hands-on semiconductor fabrication spanning MOSCAP, MOSFET and TFT structures, with experience across thin-film deposition, lithography, dielectric and electrode formation, and device process integration.",
+    topics: ["MOSCAP", "MOSFET", "TFT"],
+  },
+  {
+    index: "02",
+    category: "EMERGING MEMORY",
+    title: "Memristive Devices",
+    description:
+      "Research into memristive sensory devices, resistive-switching mechanisms and performance engineering, examining material, interface and device-level approaches for sensing and emerging computing applications.",
+    topics: ["Memristors", "Resistive Switching", "Sensory Devices"],
+  },
+  {
+    index: "03",
+    category: "FUNCTIONAL MATERIALS",
+    title: "Laser-Induced Graphene",
+    description:
+      "Fabrication and process optimization of laser-induced graphene using CO₂ laser processing, investigating power, scan speed, focus, passes and pattern geometry to improve structural quality and reproducibility.",
+    topics: ["LIG", "CO₂ Laser", "Process Optimization"],
+  },
+  {
+    index: "04",
+    category: "OPTICAL SENSING",
+    title: "Spectral Instrumentation",
+    description:
+      "Development of a portable 18-channel optical spectrometer spanning 410–940 nm, with sensor integration, spectral calibration, embedded visualization and analysis of wavelength-dependent response.",
+    topics: ["18-Channel Sensing", "Calibration", "Instrumentation"],
+  },
+] as const satisfies readonly ResearchItemProps[];
 
 export default function Home() {
   return (
@@ -116,6 +155,34 @@ export default function Home() {
                 <FeaturedProject key={project.title} {...project} />
               ))}
             </Stack>
+          </Stack>
+        </Container>
+      </Section>
+
+      <Section id="research" tone="surface">
+        <Container>
+          <Stack space="3xl">
+            <Stack space="md" className="max-w-reading">
+              <p className="text-label font-medium tracking-label text-text-muted">
+                RESEARCH
+              </p>
+              <h2 className="text-headline font-medium tracking-headline text-text-primary">
+                From Materials to Devices.
+              </h2>
+              <p className="text-body text-text-secondary">
+                Exploring semiconductor devices, functional materials, fabrication
+                processes, and emerging computing technologies.
+              </p>
+              <p className="text-caption text-text-muted">
+                Research Experience — CREST, BITS Pilani Hyderabad
+              </p>
+            </Stack>
+
+            <div>
+              {researchItems.map((item) => (
+                <ResearchItem key={item.index} {...item} />
+              ))}
+            </div>
           </Stack>
         </Container>
       </Section>
