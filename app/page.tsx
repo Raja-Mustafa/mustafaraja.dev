@@ -7,6 +7,10 @@ import {
   type FeaturedProjectProps,
 } from "@/components/sections/featured-project";
 import {
+  ExperienceItem,
+  type ExperienceItemProps,
+} from "@/components/sections/experience-item";
+import {
   ResearchItem,
   type ResearchItemProps,
 } from "@/components/sections/research-item";
@@ -80,6 +84,41 @@ const researchItems = [
     topics: ["18-Channel Sensing", "Calibration", "Instrumentation"],
   },
 ] as const satisfies readonly ResearchItemProps[];
+
+const experienceItems = [
+  {
+    organization: "CREST, BITS Pilani Hyderabad",
+    role: "Research Intern — Semiconductor Fabrication",
+    description:
+      "Hands-on research experience spanning semiconductor device fabrication, laser-induced graphene, and optical instrumentation within a multidisciplinary research environment.",
+    disciplines: [
+      "Semiconductor Fabrication",
+      "Research",
+      "LIG",
+      "Optical Instrumentation",
+    ],
+  },
+  {
+    period: "2025–2026",
+    organization: "Robotics & AV Club, FoTE MSU",
+    role: "Head of Programming",
+    description:
+      "Led programming activities and contributed to robotics, autonomous systems, software development, technical projects, and the club's web platform.",
+    disciplines: [
+      "Robotics",
+      "Autonomous Systems",
+      "Software Engineering",
+      "Technical Leadership",
+    ],
+  },
+  {
+    organization: "Micron Technology, Hyderabad",
+    role: "Industry Exposure — URAM Program",
+    description:
+      "Technical industrial exposure to semiconductor memory development, validation laboratories, SSD and RAM testing, PCIe technology, and the memory product lifecycle.",
+    disciplines: ["Memory Systems", "Validation", "Semiconductor Industry", "PCIe"],
+  },
+] as const satisfies readonly ExperienceItemProps[];
 
 export default function Home() {
   return (
@@ -181,6 +220,31 @@ export default function Home() {
             <div>
               {researchItems.map((item) => (
                 <ResearchItem key={item.index} {...item} />
+              ))}
+            </div>
+          </Stack>
+        </Container>
+      </Section>
+
+      <Section id="experience">
+        <Container>
+          <Stack space="3xl">
+            <Stack space="md" className="max-w-reading">
+              <p className="text-label font-medium tracking-label text-text-muted">
+                EXPERIENCE
+              </p>
+              <h2 className="text-headline font-medium tracking-headline text-text-primary">
+                Where Engineering Meets Practice.
+              </h2>
+              <p className="text-body text-text-secondary">
+                Research, technical leadership, and industry exposure across
+                semiconductor technology, intelligent systems, and software engineering.
+              </p>
+            </Stack>
+
+            <div>
+              {experienceItems.map((item) => (
+                <ExperienceItem key={`${item.organization}-${item.role}`} {...item} />
               ))}
             </div>
           </Stack>
