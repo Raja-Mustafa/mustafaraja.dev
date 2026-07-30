@@ -18,7 +18,7 @@ export function ExperienceItem({
       {period ? (
         <p className="text-caption text-text-muted lg:pt-space-micro">{period}</p>
       ) : (
-        <div aria-hidden="true" />
+        <div aria-hidden="true" className="hidden lg:block" />
       )}
 
       <div>

@@ -40,7 +40,10 @@ export function FeaturedProject({
           {title}
         </h3>
         <p className="text-body text-text-secondary">{description}</p>
-        <Link href={href} className="w-fit text-body font-medium text-accent">
+        <Link
+          href={href}
+          className="w-fit text-body font-medium text-accent hover:text-accent-strong"
+        >
           View Case Study →
         </Link>
       </Stack>

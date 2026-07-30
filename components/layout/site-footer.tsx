@@ -27,7 +27,7 @@ export function SiteFooter() {
                     href={link.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="hover:text-text-primary"
+                    className="hover:text-accent-strong"
                   >
                     {link.label}
                   </a>

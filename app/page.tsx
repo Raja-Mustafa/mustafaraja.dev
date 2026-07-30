@@ -173,9 +173,9 @@ export default function Home() {
                 Electronics Engineering • AI • Embedded Systems • Research
               </p>
               <h1 className="text-headline font-semibold tracking-display text-text-primary sm:text-display">
-                <span className="block whitespace-nowrap">Built to sense.</span>
-                <span className="block whitespace-nowrap">Designed to think.</span>
-                <span className="block whitespace-nowrap">Engineered to adapt.</span>
+                <span className="block">Built to sense.</span>
+                <span className="block">Designed to think.</span>
+                <span className="block">Engineered to adapt.</span>
               </h1>
             </Stack>
 
@@ -195,13 +195,13 @@ export default function Home() {
             <div className="flex flex-col gap-space-md sm:flex-row">
               <Link
                 href="/projects"
-                className="w-full rounded-md bg-accent px-space-xl py-space-md text-center text-body font-medium text-accent-foreground sm:w-auto"
+                className="w-full rounded-md bg-accent px-space-xl py-space-md text-center text-body font-medium text-accent-foreground hover:bg-accent-strong sm:w-auto"
               >
                 View Projects
               </Link>
               <Link
                 href="/resume"
-                className="w-full rounded-md border border-border px-space-xl py-space-md text-center text-body font-medium text-text-primary sm:w-auto"
+                className="w-full rounded-md border border-border px-space-xl py-space-md text-center text-body font-medium text-text-primary hover:border-border-strong hover:bg-surface-muted sm:w-auto"
               >
                 Resume
               </Link>

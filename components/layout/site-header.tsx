@@ -13,7 +13,7 @@ export function SiteHeader({ currentPath }: SiteHeaderProps) {
         <div className="flex flex-wrap items-center justify-between gap-space-sm py-space-md">
           <Link
             href="/"
-            className="text-body font-semibold tracking-headline text-text-primary"
+            className="text-body font-semibold tracking-headline text-text-primary hover:text-accent-strong"
           >
             Mustafa Raja
           </Link>
