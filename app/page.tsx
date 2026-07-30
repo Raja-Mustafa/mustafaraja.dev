@@ -3,6 +3,10 @@ import { Container } from "@/components/layout/container";
 import { Section } from "@/components/layout/section";
 import { Stack } from "@/components/layout/stack";
 import {
+  CapabilityGroup,
+  type CapabilityGroupProps,
+} from "@/components/sections/capability-group";
+import {
   FeaturedProject,
   type FeaturedProjectProps,
 } from "@/components/sections/featured-project";
@@ -119,6 +123,44 @@ const experienceItems = [
     disciplines: ["Memory Systems", "Validation", "Semiconductor Industry", "PCIe"],
   },
 ] as const satisfies readonly ExperienceItemProps[];
+
+const capabilityGroups = [
+  {
+    title: "Hardware & Electronics",
+    capabilities: [
+      "Semiconductor Devices",
+      "Embedded Systems",
+      "Sensors",
+      "Optical Instrumentation",
+      "Electronics",
+    ],
+  },
+  {
+    title: "AI & Autonomous Systems",
+    capabilities: [
+      "Computer Vision",
+      "Robotics",
+      "SLAM",
+      "Autonomous Systems",
+      "AI",
+    ],
+  },
+  {
+    title: "Software Engineering",
+    capabilities: ["Python", "C/C++", "Java", "JavaScript", "TypeScript", "Next.js", "ROS 2"],
+  },
+  {
+    title: "Engineering & Research",
+    capabilities: [
+      "Semiconductor Fabrication",
+      "Linux",
+      "Git",
+      "Docker",
+      "MATLAB",
+      "Research & Prototyping",
+    ],
+  },
+] as const satisfies readonly CapabilityGroupProps[];
 
 export default function Home() {
   return (
@@ -245,6 +287,31 @@ export default function Home() {
             <div>
               {experienceItems.map((item) => (
                 <ExperienceItem key={`${item.organization}-${item.role}`} {...item} />
+              ))}
+            </div>
+          </Stack>
+        </Container>
+      </Section>
+
+      <Section id="capabilities" tone="surface" className="py-space-3xl">
+        <Container>
+          <Stack space="2xl">
+            <Stack space="md" className="max-w-reading">
+              <p className="text-label font-medium tracking-label text-text-muted">
+                CAPABILITIES
+              </p>
+              <h2 className="text-headline font-medium tracking-headline text-text-primary">
+                Across the Stack.
+              </h2>
+              <p className="text-body text-text-secondary">
+                From semiconductor devices to intelligent systems and the software that
+                connects them.
+              </p>
+            </Stack>
+
+            <div className="grid gap-x-space-2xl gap-y-space-xl md:grid-cols-2">
+              {capabilityGroups.map((group) => (
+                <CapabilityGroup key={group.title} {...group} />
               ))}
             </div>
           </Stack>
