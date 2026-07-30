@@ -317,6 +317,27 @@ export default function Home() {
           </Stack>
         </Container>
       </Section>
+
+      <Section id="contact" tone="muted">
+        <Container>
+          <Stack space="xl" className="max-w-reading">
+            <Stack space="md">
+              <p className="text-label font-medium tracking-label text-text-muted">
+                LET&apos;S CONNECT
+              </p>
+              <h2 className="text-headline font-medium tracking-display text-text-primary sm:text-display">
+                Ideas are better when they&apos;re built.
+              </h2>
+              <p className="text-body text-text-secondary">
+                I&apos;m always interested in engineering, research, and software
+                opportunities — especially where hardware, intelligent systems, and
+                computation intersect.
+              </p>
+            </Stack>
+
+          </Stack>
+        </Container>
+      </Section>
     </>
   );
 }
